@@ -90,10 +90,10 @@ class RequestLoggingMiddleware:
         rlm_class = RequestLoggingMiddleware
 
         self.detailed_db_query_diagnostics_active = getattr(
-            settings, "CTS_REQUEST_LOGGING_DETAILED_DB_QUERY_DIAGNOSTICS_ACTIVE", True
+            settings, "REQUEST_LOGGING_DETAILED_DB_QUERY_DIAGNOSTICS_ACTIVE", True
         )
         self.detailed_db_query_diagnostics_threshold = getattr(
-            settings, "CTS_REQUEST_LOGGING_DETAILED_DB_QUERY_DIAGNOSTICS_THRESHOLD", 0
+            settings, "REQUEST_LOGGING_DETAILED_DB_QUERY_DIAGNOSTICS_THRESHOLD", 0
         )
 
         self.get_response = get_response  # type: callable
