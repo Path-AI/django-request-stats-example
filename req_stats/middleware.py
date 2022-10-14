@@ -90,7 +90,7 @@ class RequestLoggingMiddleware:
         rlm_class = RequestLoggingMiddleware
 
         self.detailed_db_query_diagnostics_active = getattr(
-            settings, "REQUEST_LOGGING_DETAILED_DB_QUERY_DIAGNOSTICS_ACTIVE", True
+            settings, "REQUEST_LOGGING_DETAILED_DB_QUERY_DIAGNOSTICS_ACTIVE", False
         )
         self.detailed_db_query_diagnostics_threshold = getattr(
             settings, "REQUEST_LOGGING_DETAILED_DB_QUERY_DIAGNOSTICS_THRESHOLD", 0
