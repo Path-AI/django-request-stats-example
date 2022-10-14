@@ -1,5 +1,9 @@
 This project contains:
 * [A reference implementation of Django middleware](req_stats/middleware.py) that allows to track your database queries within a request
+  * It is self-sufficient for use in other projects, just drop it in and register.  
+  * DB_INSTRUMENTATION_ENABLED controls whether DB queries are counted and time is measured, default is True
+  * REQUEST_LOGGING_DETAILED_DB_QUERY_DIAGNOSTICS_ACTIVE controls whether detailed query diagnostics with call stacks is enabled, default is False
+  * REQUEST_LOGGING_DETAILED_DB_QUERY_DIAGNOSTICS_THRESHOLD controls above what number of repeats a query will be logged, default is 0
 * An example "library" app that can be run to demonstrate:
   * how excessive queries can happen
   * how they can be tracked
