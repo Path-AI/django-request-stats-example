@@ -12,6 +12,6 @@ Instructions:
 * create a superuser `python manage.py createsuperuser`
 * go to admin panel http://localhost:8000/admin/ and add some authors, books and physical books
 * go to the book list endpoint http://127.0.0.1:8000/library/books/ and observe high level logged request stats
-* by default, detailed logging it turned off via REQUEST_LOGGING_DETAILED_DB_QUERY_DIAGNOSTICS_ACTIVE being False in lib_example/settings.py, switch that to True and rerun the list GET to observe the call stacks being reported.
+* by default, detailed logging it turned off via `REQUEST_LOGGING_DETAILED_DB_QUERY_DIAGNOSTICS_ACTIVE` being False in [lib_example/settings.py](lib_example/settings.py), switch that to True and rerun the list GET to observe the call stacks being reported.
 
 There is an upcoming blog post that will describe the problem and this solution in detail, at which time the reference to the post will be inserted here.
