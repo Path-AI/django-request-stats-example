@@ -13,7 +13,6 @@ class TestBook:
         return PhysicalBook.objects.create(book=book)
     
     def test_book(self, book):
-        breakpoint()
         assert book is not None
 
     def test_phys_book(self, physical_book):

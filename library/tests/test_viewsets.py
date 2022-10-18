@@ -12,5 +12,4 @@ class TestBookViewset:
         with django_assert_max_num_queries(5):
             api_client = APIClient()
             response = api_client.get(path="/library/books/")
-            breakpoint()
 
