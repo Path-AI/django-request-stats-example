@@ -207,7 +207,7 @@ class RequestLoggingMiddleware:
                 for key, value in sorted(
                     all_queries.items(), key=lambda x: x[1].total_number, reverse=True
                 ):
-                    if value.total_number > self.detailed_db_query_diagnostics_threshold:
+                    if value.total_number >= self.detailed_db_query_diagnostics_threshold:
                         self._logger.log(
                             self._get_level(status_code),
                             f"{value.total_number} instances of the following query:\n{key}",
