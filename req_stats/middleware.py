@@ -223,7 +223,7 @@ class RequestLoggingMiddleware:
 
 
     def parse_log(self, request, status_code):
-        resp_env = request.__dict__["environ"]  # type: dict
+        resp_env = request.__dict__["META"]  # type: dict
         resolver_match = request.__dict__["resolver_match"]
         log_dict = {}
         log_dict.update(
