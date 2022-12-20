@@ -223,12 +223,7 @@ class RequestLoggingMiddleware:
 
 
     def parse_log(self, request, status_code):
-        try:
-            resp_env = request.__dict__["environ"]  # type: dict
-        except KeyError:
-            # Handle v2.x channels.http.AsgiRequest using a different key:
-            # https://github.com/django/channels/blob/2.4.0/channels/http.py#L61
-            resp_env = request.__dict__["META"]  # type: dict
+        resp_env = request.__dict__["META"]  # type: dict
         resolver_match = request.__dict__["resolver_match"]
         log_dict = {}
         log_dict.update(
